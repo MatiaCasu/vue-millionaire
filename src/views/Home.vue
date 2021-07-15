@@ -22,7 +22,7 @@ export default {
 .container {
   background-color: #10103a;
   color: #fff;
-  padding: 30px;
+  padding: 50px 0;
   height: 100vh;
   text-align: center;
 
@@ -35,5 +35,6 @@ export default {
 img {
   width: 40%;
   max-width: 250px;
+  min-width: 200px;
 }
 </style>
