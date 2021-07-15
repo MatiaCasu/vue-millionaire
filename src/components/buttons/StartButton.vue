@@ -1,75 +1,22 @@
 <template>
-<div class="btn_container">
-  <hr>
-  <router-link to="/Play" tag="button"><span class="left"></span>Start Game<span class="right"></span></router-link>  
-</div>
+  <div class="base-btn">
+    <hr>
+    <router-link to="/Play" tag="button"><span class="left"></span>{{text}}<span class="right"></span></router-link>  
+  </div>
 </template>
 
 <script>
   export default {
-    name: "StartButton"
+    name: "StartButton",
+    props: {
+      text: {
+      type: String,
+      require: true
+      }
+    }
   };
 </script>
 
-<style scoped lang="scss">
-  .btn_container{
-    position: relative;  
-    text-align: center;
-  }
-
-  hr{
-    position: absolute;
-    width: 100%;
-    height: 3px;
-    top: 50%;
-    border: 0;
-    background: #fff;
-  }
-
-  button{
-    font-size: 30px;
-    border: 4px solid #fff;
-    width: 50%;
-    min-width: 250px;
-    height: 88px;
-    margin: 1.8em auto;
-    border-radius: 50px;
-    position: relative;
-    color: #fff;
-    background-color: #000120;
-    cursor: pointer;
-
-    & > .left, &> .right{
-      content: '';
-      display: block;
-      width: 40px;
-      height: 40px;
-      position: absolute;
-      top: calc( 50% + 1px);
-      background-color: #000120;
-    } 
-
-    & > .left{
-      left: -13.5px;
-      border: solid #fff;
-      border-radius: 0 100% 0 0;
-      border-width: 0 0 4px 4px;
-      transform: translateY( -50% ) rotate( 43deg );
-    }
-
-    & > .right{
-      right: -13.5px;
-      border: solid #fff;
-      border-radius: 0 0 0 100%;
-      transform: translateY( -50% ) rotate( 46.5deg );
-      border-width: 4px 4px 0 0;
-    }
-
-    &:hover,
-    &:hover .left,
-    &:hover .right{
-      background-color: #ffb52c;  
-    }
-  }
-
+<style lang="scss">
+  @import "@/assets/scss/_baseButton";
 </style>

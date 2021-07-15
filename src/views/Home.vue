@@ -1,8 +1,8 @@
 <template>
   <div class="container">
-    <img alt="Vue logo" src="../assets/logo-m.png" />
+    <img alt="Vue logo" src="../assets/img/logo-m.png" />
     <h1>The Millionaire</h1>
-    <StartButton></StartButton>
+    <StartButton text="Start Game"></StartButton>
   </div>
 </template>
 
@@ -19,22 +19,16 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.container {
-  background-color: #10103a;
-  color: #fff;
-  padding: 50px 0;
-  height: 100vh;
-  text-align: center;
+  @import "@/assets/scss/_commons";
 
   h1 {
     font-size: 50px;
     margin-top: 50px;
   }
-}
 
-img {
-  width: 40%;
-  max-width: 250px;
-  min-width: 200px;
-}
+  img {
+    width: 40%;
+    max-width: 250px;
+    min-width: 200px;
+  }
 </style>

@@ -3,18 +3,7 @@
     <router-view />
   </div>
 </template>
-<script>
-export default {};
-</script>
 
 <style lang="scss">
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body, button{
-  font-family: Georgia, 'Times New Roman', Times, serif ;
-}
+  @import "@/assets/scss/_commons";
 </style>
